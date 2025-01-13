@@ -4,14 +4,17 @@ import {
     Text,
     StyleSheet,
     useColorScheme,
+    ScrollView,
     } from 'react-native';
+import FlashCard from './component/FlashCard';
 
 function App(): JSX.Element{
     const isDarkMode = useColorScheme() === 'dark';
         return(
-                <View style={styles.container}>
+                <ScrollView style={styles.container}>
                     <Text style={isDarkMode ? styles.TextWhite : styles.TextBlack}>Hello world</Text>
-                </View>
+                    <FlashCard></FlashCard>
+                </ScrollView>
         );
     }
 
